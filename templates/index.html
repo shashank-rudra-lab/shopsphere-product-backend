@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Service</title>
+    <style>
+        body {
+            background: #000;
+            color: #f1f1f1;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 60px;
+        }
+        form {
+            margin-top:250px;
+            text-align: center;
+        }
+        button {
+            background: #222;
+            color: yellow;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        button:hover {
+            background: #444;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Product Service Home Page</h1>
+    <form action="/add-product" method="get">
+        <button type="submit">Add Product</button>
+    </form>
+</body>
+</html>
