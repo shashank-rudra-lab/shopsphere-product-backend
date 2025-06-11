@@ -1,11 +1,8 @@
 from flask import Flask, render_template, request, jsonify
 from google.cloud import datastore
-import os
 
 app = Flask(__name__)
 
-# Set up Google Cloud credentials (ensure this path is correct)
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "service-account.json"
 datastore_client = datastore.Client()
 
 @app.route('/')
