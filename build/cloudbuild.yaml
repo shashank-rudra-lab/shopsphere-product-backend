@@ -36,7 +36,7 @@ steps:
           --region us-central1 \
           --platform managed \
           --service-account shopshere-product-service@silent-octagon-460701-a0.iam.gserviceaccount.com \
-          --allow-unauthenticated \
+          --allow-unauthenticated 
           
  
 options:
