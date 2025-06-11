@@ -16,7 +16,7 @@ steps:
       - 'us-central1-docker.pkg.dev/silent-octagon-460701-a0/product-backend:$BUILD_ID'
       - '-f'
       - 'build/Dockerfile'
-      - '.
+      - '.'
 
   # Step 3: Push Docker image
   - name: 'gcr.io/cloud-builders/docker'
