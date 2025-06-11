@@ -5,8 +5,6 @@ steps:
       - 'build'
       - '-t'
       - 'us-central1-docker.pkg.dev/silent-octagon-460701-a0/product-backend:$BUILD_ID'
-      - '-f'
-      - 'build/Dockerfile'
       - '.'
 
   # Step 2: Push Docker image
