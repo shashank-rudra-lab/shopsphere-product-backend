@@ -4,14 +4,14 @@ steps:
     args:
       - 'build'
       - '-t'
-      - 'us-central1-docker.pkg.dev/silent-octagon-460701-a0/product-backend:$BUILD_ID'
+      - 'us-central1-docker.pkg.dev/silent-octagon-460701-a0/product-backend/product-backend:$BUILD_ID'
       - '.'
 
   # Step 2: Push Docker image
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - 'push'
-      - 'us-central1-docker.pkg.dev/silent-octagon-460701-a0/product-backend:$BUILD_ID'
+      - 'us-central1-docker.pkg.dev/silent-octagon-460701-a0/product-backend/product-backend:$BUILD_ID'
 
   # Step 3: Deploy to Cloud Run
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
