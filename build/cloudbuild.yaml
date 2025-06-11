@@ -1,14 +1,6 @@
 steps:
-  # Step 1: Build Python package
-  - name: 'python'
-    entrypoint: 'bash'
-    args:
-      - '-c'
-      - |
-        python -m pip install --upgrade pip build
-        python -m build
 
-  # Step 2: Build Docker image
+  # Step 1: Build Docker image
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - 'build'
@@ -18,13 +10,13 @@ steps:
       - 'build/Dockerfile'
       - '.'
 
-  # Step 3: Push Docker image
+  # Step 2: Push Docker image
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - 'push'
       - 'us-central1-docker.pkg.dev/silent-octagon-460701-a0/product-backend:$BUILD_ID'
 
-  # Step 4: Deploy to cloud run
+  # Step 3: Deploy to cloud run
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: 'bash'
     args:
